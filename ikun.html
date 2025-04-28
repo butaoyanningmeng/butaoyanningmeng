@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI加速 青春领跑 - 青年创新力量</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', '微软雅黑', sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            line-height: 1.6;
+        }
+
+        /* 青春风格头部 */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #FF6B6B 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        /* 动态导航 */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* 青春数据展示 */
+        .youth-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        /* 时间轴布局 */
+        .timeline {
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .timeline-item {
+            background: rgba(255,255,255,0.9);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* 青春动效 */
+        @keyframes youthWave {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .youth-icon {
+            width: 80px;
+            animation: youthWave 2s infinite;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        /* 能力进度条 */
+        .skill-bar {
+            height: 20px;
+            background: #e0e7ff;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #1e3c72, #FF6B6B);
+            transition: width 1s;
+            color: white;
+            text-align: right;
+            padding-right: 5px;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+            .youth-stats {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* 原有卡片样式增强 */
+        .ai-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            border: 1px solid #e0e7ff;
+            position: relative;
+        }
+
+        .ai-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(30,60,114,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>AI加速 · 青春领跑</h1>
+        <p>Z世代用代码定义未来 | 日均诞生3个青年AI项目</p>
+        <div class="youth-stats">
+            <span><i class="fas fa-users"></i> 23000+青年开发者</span>
+            <span><i class="fas fa-flask"></i> 650+校园实验室</span>
+            <span><i class="fas fa-rocket"></i> 120+孵化项目</span>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <a href="#youth"><i class="fas fa-brain"></i> 青春创新</a>
+        <a href="#cases"><i class="fas fa-lightbulb"></i> 青年案例</a>
+        <a href="#community"><i class="fas fa-handshake"></i> 活力社区</a>
+    </nav>
+
+    <main class="hero">
+        <!-- AI应用卡片...（保留原有卡片内容） -->
+
+        <!-- 青春力量模块 -->
+        <section class="youth-power">
+            <h2><i class="fas fa-running"></i> 青春力量驱动AI创新</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>2023大学生AI竞赛金奖</h3>
+                    <p>清华团队开发AI环保监测系统</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%">环保识别准确率 92%</div>
+                    </div>
+                </div>
+                <div class="timeline-line">
+                    <div class="youth-icon"><i class="fas fa-seedling fa-3x"></i></div>
+                </div>
+                <div class="timeline-item">
+                    <h3>2024青年创业扶持计划</h3>
+                    <p>孵化25个AI+医疗初创项目</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%">临床诊断效率提升 88%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 能力成长模块 -->
+        <section class="growth-section">
+            <h2><i class="fas fa-chart-line"></i> AI时代青年核心能力</h2>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%">算法思维 85%</div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 78%">创新实践 78%</div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 91%">跨界协作 91%</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="youth-stats">
+            <span><i class="fas fa-code"></i> 开源项目 1500+</span>
+            <span><i class="fas fa-graduation-cap"></i> 培养人才 10万+</span>
+        </div>
+        <button class="cta-button"><i class="fas fa-hands-helping"></i> 加入青年AI联盟</button>
+        <p>© 2024 青春AI实验室 - 代码改变世界</p>
+    </footer>
+
+    <script>
+        // 动态进度条加载效果
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.skill-progress').forEach(progress => {
+                const targetWidth = progress.style.width;
+                progress.style.width = '0';
+                setTimeout(() => {
+                    progress.style.width = targetWidth;
+                }, 500);
+            });
+        });
+
+        // 按钮点击事件
+        document.querySelector('.cta-button').addEventListener('click', () => {
+            window.location.href = '#join';
+            alert('欢迎加入青年创新社区！\n我们将发送资料到您的邮箱');
+        });
+    </script>
+</body>
+</html>
