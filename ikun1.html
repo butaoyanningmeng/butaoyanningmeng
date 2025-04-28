@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI加速 青春领跑 - 炫彩未来版</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --electric-purple: #bc13fe;
+            --cyber-yellow: #ffd300;
+            --hologram-pink: #ff3cac;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #0f0f1f, #000);
+            color: #fff;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .neon-header {
+            background: linear-gradient(135deg, 
+                var(--electric-purple) 0%, 
+                var(--neon-blue) 100%);
+            padding: 4rem 1rem;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            position: relative;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        .hologram-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+            transition: 0.3s all;
+        }
+
+        .hologram-card::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px;
+            right: -2px; bottom: -2px;
+            background: linear-gradient(45deg,
+                var(--neon-blue),
+                var(--hologram-pink),
+                var(--cyber-yellow));
+            z-index: -1;
+            border-radius: 22px;
+            animation: hologram 3s linear infinite;
+        }
+
+        @keyframes hologram {
+            0% { opacity: 0.8; }
+            50% { opacity: 0.3; }
+            100% { opacity: 0.8; }
+        }
+
+        .cyber-button {
+            background: linear-gradient(45deg, 
+                var(--electric-purple), 
+                var(--neon-blue));
+            border: none;
+            padding: 1rem 2rem;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            transition: 0.3s all;
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .neon-text {
+            background: linear-gradient(45deg,
+                var(--cyber-yellow),
+                var(--hologram-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (max-width: 768px) {
+            .neon-header { padding: 2rem 1rem; }
+            .ai-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <canvas class="matrix-bg" id="matrixCanvas"></canvas>
+
+    <header class="neon-header" data-aos="zoom-in">
+        <h1 class="neon-text">AI加速 <i class="fas fa-rocket"></i> 青春领跑</h1>
+        <p>用代码绘制未来蓝图 | 日均3.5个青年AI项目诞生</p>
+        <div class="cyber-stats">
+            <div class="hologram-card">
+                <h3><i class="fas fa-microchip"></i> 创新数据看板</h3>
+                <div class="stat-item">
+                    <span class="neon-text">15320</span> 行今日新增代码
+                </div>
+                <div class="stat-item">
+                    <span class="neon-text">89%</span> 项目采用AI技术
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="ai-grid">
+        <div class="hologram-card" data-aos="fade-up">
+            <h3><i class="fas fa-robot"></i> 智能创意工坊</h3>
+            <p>AI辅助设计系统实时生成方案</p>
+            <div class="color-palette">
+                <div style="background: var(--neon-blue)"></div>
+                <div style="background: var(--electric-purple)"></div>
+                <div style="background: var(--cyber-yellow)"></div>
+            </div>
+        </div>
+
+        <div class="hologram-card" data-aos="fade-up" data-aos-delay="200">
+            <h3><i class="fas fa-vr-cardboard"></i> 虚拟实验室</h3>
+            <p>沉浸式AI开发环境体验</p>
+            <div class="progress-bar">
+                <div style="width: 75%; background: var(--hologram-pink)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hologram-card gallery-section">
+        <h3 class="neon-text"><i class="fas fa-photo-video"></i> 创新成果展示</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('https://source.unsplash.com/random/800x600?tech,1')"></div>
+            <div class="gallery-item" style="background-image: url('https://source.unsplash.com/random/800x600?code,2')"></div>
+            <div class="gallery-item" style="background-image: url('https://source.unsplash.com/random/800x600?robot,3')"></div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // 初始化滚动动画
+        AOS.init({
+            duration: 1000,
+            once: false
+        });
+
+        // 矩阵背景动画
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
+        const drops = Array(Math.floor(canvas.width/20)).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#0F0';
+            ctx.font = '18px monospace';
+            
+            drops.forEach((y, i) => {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i*20, y*20);
+                drops[i] = y > canvas.height/20 ? 0 : y + 1;
+            });
+        }
+        setInterval(drawMatrix, 50);
+    </script>
+</body>
+</html>
